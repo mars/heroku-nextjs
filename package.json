@@ -8,6 +8,9 @@
     "start": "next start -p $PORT",
     "postinstall": "bin/heroku-nextjs-build"
   },
+  "cacheDirectories": [
+    "nextjs/node_modules"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mars/heroku-nextjs.git"
