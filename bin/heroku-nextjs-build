@@ -33,5 +33,18 @@ then
   mkdir -p $RUNTIME_DIR
   mv $APP_DIR/* $APP_DIR/.[!.]* $RUNTIME_DIR/
   cd $BUILD_DIR
+
+  # Put artifacts required by Heroku runtime at root of app.
   mv $APP_NAMESPACE/Procfile .
+  cat > package.json <<'HEREDOC'
+{
+  "name": "heroku-nextjs-shim",
+  "version": "1.0.0",
+  "description": "Shim to use node_modules cache with Next.js on Heroku",
+  "cacheDirectories": [
+    "nextjs/node_modules"
+  ]
+}
+HEREDOC
+
 fi
