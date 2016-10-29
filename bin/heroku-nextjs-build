@@ -1,0 +1,37 @@
+#!/bin/bash
+
+# Fail immediately on non-zero exit code.
+set -e
+# Fail immediately on non-zero exit code within a pipeline.
+set -o pipefail
+# Fail on undeclared variables.
+set -u
+# Debug, echo every command
+#set -x
+
+# This shim performs the production build in a directory prefix 
+# compatible with Heroku dyno runtime, `/app/nextjs`.
+#
+# Background: when running `next build`, the current absolute file 
+# path is captured for the server-side runtime. Since Heroku builds
+# are performed in a randomly-named temporary directory, these absolute 
+# paths go missing, resulting in server errors.
+#
+if [ "$NODE_ENV" = production ]
+then
+  APP_NAMESPACE=nextjs
+  APP_DIR=/app/$APP_NAMESPACE
+  BUILD_DIR=$(pwd)
+  RUNTIME_DIR=$BUILD_DIR/$APP_NAMESPACE
+
+  mkdir -p $APP_DIR
+  mv $BUILD_DIR/* $APP_DIR/
+  cd $APP_DIR
+
+  npm run build
+
+  mkdir -p $RUNTIME_DIR
+  mv $APP_DIR/* $APP_DIR/.[!.]* $RUNTIME_DIR/
+  cd $BUILD_DIR
+  mv $APP_NAMESPACE/Procfile .
+fi

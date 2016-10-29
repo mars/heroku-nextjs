@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start -p $PORT",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "if [ \"$NODE_ENV\" = production ] ; then APP_NAMESPACE=nextjs APP_DIR=/app/$APP_NAMESPACE; BUILD_DIR=$(pwd); mkdir -p $APP_DIR; mv $BUILD_DIR/* $APP_DIR/; cd $APP_DIR; npm run build; mkdir -p $BUILD_DIR/$APP_NAMESPACE; mv $APP_DIR/* $APP_DIR/.[!.]* $BUILD_DIR/$APP_NAMESPACE/; cd $BUILD_DIR; mv $APP_NAMESPACE/Procfile . ; fi"
+    "postinstall": "bin/heroku-nextjs-build"
   },
   "repository": {
     "type": "git",
