@@ -6,7 +6,8 @@
     "dev": "next",
     "build": "next build",
     "start": "next start -p $PORT",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "if [ \"$NODE_ENV\" = production ] ; then npm run build ; fi"
   },
   "repository": {
     "type": "git",
