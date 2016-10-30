@@ -5,6 +5,8 @@ Deploy [Next.js](https://zeit.co/blog/next) universal web apps on [Heroku](https
 **Demo deployment** from this repo:  
 https://nextjs.herokuapp.com
 
+[Download this repo](archive/master.zip) as a Heroku-ready app template, or follow [Production Deployment](#production-deployment) to push an existing app to Heroku.
+
 ## Requires
 
 * Heroku
@@ -42,14 +44,27 @@ Once you have a [Next.js app working locally](https://github.com/zeit/next.js#ho
     ]
   }
   ```
-1. Ensure the app is a git repo: `git init`
-1. Create the Heroku app: `heroku create $my-app-name`
-1. Deploy:
+1. Define the web process:
+
+  ```bash
+  echo 'web: cd /app/nextjs && npm run start' > Procfile
+  ```
+1. Ensure the app is a git repo, ignoring local-only directories:
+
+  ```bash
+  git init
+  (echo node_modules/ && echo .next/) >> .gitignore
+  ```
+1. Create the Heroku app:
+
+  ```bash
+  heroku create $my-app-name
+  ```
+1. 🚀 Deploy:
 
   ```bash
   git add .
   git commit -m 'Next.js app on Heroku'
   git push heroku master
   ```
-1. View the app: `heroku open`
-1. ♻️ to deploy changes: add, commit, & push again.
+1. ♻️ Deploy changes: add, commit, & push again.
