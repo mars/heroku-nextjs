@@ -22,22 +22,18 @@ Once you have a [Next.js app working locally](https://github.com/zeit/next.js#ho
 
 ✏️ *In the following instructions, replace `$my-app-name` with your own unique app name.*
 
-1. Add the Heroku build adapter
-  1. Add [`bin/heroku-nextjs-build`](bin/heroku-nextjs-build) to your app
-  1. Make sure it is executable: `chmod +x bin/heroku-nextjs-build`
-1. Edit `package.json` to resemble:
+1. Install the Heroku build adapter:
+
+  ```bash
+  npm install @mars/heroku-nextjs-build --save
+  ```
+1. Merge the following entries into `package.json`:
 
   ```json
   {
-    "name": "$my-app-name",
-    "dependencies": {
-      "next": "latest"
-    },
     "scripts": {
-      "dev": "next",
-      "build": "next build",
       "start": "next start -p $PORT",
-      "postinstall": "bin/heroku-nextjs-build"
+      "postinstall": "heroku-nextjs-build"
     },
     "cacheDirectories": [
       "nextjs/node_modules"

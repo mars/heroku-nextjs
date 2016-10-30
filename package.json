@@ -6,7 +6,7 @@
     "dev": "next",
     "build": "next build",
     "start": "next start -p $PORT",
-    "postinstall": "bin/heroku-nextjs-build"
+    "postinstall": "heroku-nextjs-build"
   },
   "cacheDirectories": [
     "nextjs/node_modules"
@@ -27,6 +27,7 @@
   },
   "homepage": "https://github.com/mars/heroku-nextjs#readme",
   "dependencies": {
+    "@mars/heroku-nextjs-build": "^1.0.0",
     "next": "^1.0.2"
   }
 }
