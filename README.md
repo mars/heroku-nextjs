@@ -44,11 +44,6 @@ Once you have a [Next.js app working locally](https://github.com/zeit/next.js#ho
     ]
   }
   ```
-1. Define the web process:
-
-  ```bash
-  echo 'web: cd /app/nextjs && npm run start' > Procfile
-  ```
 1. Ensure the app is a git repo, ignoring local-only directories:
 
   ```bash

@@ -35,12 +35,14 @@ then
   cd $BUILD_DIR
 
   # Put artifacts required by Heroku runtime at root of app.
-  mv $APP_NAMESPACE/Procfile .
   cat > package.json <<'HEREDOC'
 {
   "name": "heroku-nextjs-shim",
   "version": "1.0.0",
   "description": "Shim to use node_modules cache with Next.js on Heroku",
+  "scripts": {
+    "start": "npm run start --prefix nextjs"
+  },
   "cacheDirectories": [
     "nextjs/node_modules"
   ]
