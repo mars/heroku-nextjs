@@ -5,7 +5,7 @@ Deploy [Next.js](https://zeit.co/blog/next) universal web apps on [Heroku](https
 **Demo deployment** from this repo:  
 https://nextjs.herokuapp.com
 
-[Download this repo](archive/master.zip) as a Heroku-ready app template, or follow [Production Deployment](#production-deployment) to push an existing app to Heroku.
+[Download this repo](https://github.com/mars/heroku-nextjs/archive/master.zip) as a Heroku-ready app template, or follow [Production Deployment](#production-deployment) to push an existing app to Heroku.
 
 ## Requires
 
