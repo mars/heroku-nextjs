@@ -22,7 +22,7 @@ Once you have a [Next.js app working locally](https://github.com/zeit/next.js#ho
 
 ✏️ *In the following instructions, replace `$my-app-name` with your own unique app name.*
 
-1. Install the Heroku build adapter:
+1. Install the [Heroku build adapter](https://github.com/mars/heroku-nextjs-build/blob/master/bin/heroku-nextjs-build):
 
   ```bash
   npm install @mars/heroku-nextjs-build --save
