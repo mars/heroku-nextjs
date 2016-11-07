@@ -35,6 +35,9 @@ Once you have a [Next.js app working locally](https://github.com/zeit/next.js#ho
       "start": "next start -p $PORT",
       "postinstall": "heroku-nextjs-build"
     },
+    "engines": {
+      "node": "6.9.1"
+    },
     "cacheDirectories": [
       "nextjs/node_modules"
     ]
