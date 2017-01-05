@@ -9,7 +9,7 @@
     "postinstall": "heroku-nextjs-build"
   },
   "engines": {
-    "node": "6.9.1"
+    "node": "6.9.x"
   },
   "cacheDirectories": [
     "nextjs/node_modules"
