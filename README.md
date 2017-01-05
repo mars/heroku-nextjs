@@ -20,7 +20,7 @@ https://nextjs.herokuapp.com
 
 Once you have a [Next.js app working locally](https://github.com/zeit/next.js#how-to-use), you may deploy it for public access.
 
-✏️ *In the following instructions, replace `$my-app-name` with your own unique app name.*
+✏️ *In the following instructions, replace `$APP_NAME` with your own unique app name.*
 
 1. Install the [Heroku build adapter](https://github.com/mars/heroku-nextjs-build/blob/master/bin/heroku-nextjs-build):
 
@@ -52,7 +52,7 @@ Once you have a [Next.js app working locally](https://github.com/zeit/next.js#ho
 1. Create the Heroku app:
 
   ```bash
-  heroku create $my-app-name
+  heroku create $APP_NAME
   ```
 1. 🚀 Deploy:
 
