@@ -1,11 +1,13 @@
 # Next.js on Heroku
 
-Deploy [Next.js](https://zeit.co/blog/next) universal web apps on [Heroku](https://www.heroku.com/home).
+Deploy [Next](https://zeit.co/blog/next) universal web apps on [Heroku](https://www.heroku.com/home).
 
 **Demo deployment** from this repo:  
 https://nextjs.herokuapp.com
 
 [Download this repo](https://github.com/mars/heroku-nextjs/archive/master.zip) as a Heroku-ready app template, or follow [Production Deployment](#production-deployment) to push an existing app to Heroku.
+
+See also: example [Next with custom Express server on Heroku](https://github.com/mars/heroku-nextjs-custom-server-express)
 
 ## Requires
 
@@ -18,7 +20,7 @@ https://nextjs.herokuapp.com
 
 ## Production deployment
 
-Once you have a [Next.js app working locally](https://github.com/zeit/next.js#how-to-use), you may deploy it for public access.
+Once you have a [Next app working locally](https://github.com/zeit/next.js#how-to-use), you may deploy it for public access.
 
 ✏️ *In the following instructions, replace `$APP_NAME` with your own unique app name.*
 
