@@ -30,7 +30,7 @@
   },
   "homepage": "https://github.com/mars/heroku-nextjs#readme",
   "dependencies": {
-    "@mars/heroku-nextjs-build": "^1.0.0",
+    "@mars/heroku-nextjs-build": "^1.1.0",
     "next": "^1.0.2"
   }
 }
