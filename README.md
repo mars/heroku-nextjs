@@ -40,7 +40,7 @@ Once you have a [Next app working locally](https://github.com/zeit/next.js#how-t
   {
     "scripts": {
       "start": "next start -p $PORT",
-      "postinstall": "heroku-nextjs-build"
+      "heroku-postbuild": "heroku-nextjs-build"
     },
     "engines": {
       "node": "6.9.x"
