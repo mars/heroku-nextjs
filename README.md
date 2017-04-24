@@ -1,4 +1,4 @@
-#  [Next.js](https://zeit.co/blog/next) on Heroku
+#  [Next.js](https://zeit.co/blog/next2) on Heroku
 
 Deploy [React](https://facebook.github.io/react/)-based universal web apps on [Heroku](https://www.heroku.com/home).
 
