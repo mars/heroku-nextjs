@@ -27,29 +27,10 @@ https://nextjs.herokuapp.com
 
 Once you have a [Next app working locally](https://github.com/zeit/next.js#how-to-use), you may deploy it for public access.
 
+🌈 In February 2017, [Next was fixed](https://github.com/zeit/next.js/pull/1164) so that it no longer requires a static build path. As a result, the **[Heroku build adapter](https://github.com/mars/heroku-nextjs-build/blob/master/bin/heroku-nextjs-build) is no longer required**. Next may be deployed to Heroku without any special setup.
+
 ✏️ *In the following instructions, replace `$APP_NAME` with your own unique app name.*
 
-1. Install the [Heroku build adapter](https://github.com/mars/heroku-nextjs-build/blob/master/bin/heroku-nextjs-build):
-
-  ```bash
-  npm install @mars/heroku-nextjs-build --save
-  ```
-1. Merge the following entries into `package.json`:
-
-  ```json
-  {
-    "scripts": {
-      "start": "next start -p $PORT",
-      "heroku-postbuild": "heroku-nextjs-build"
-    },
-    "engines": {
-      "node": "6.9.x"
-    },
-    "cacheDirectories": [
-      "nextjs/node_modules"
-    ]
-  }
-  ```
 1. Ensure the app is a git repo, ignoring local-only directories:
 
   ```bash
