@@ -31,20 +31,20 @@ Once you have a [Next app working locally](https://github.com/zeit/next.js#how-t
 
 1. Ensure the app is a git repo, ignoring local-only directories:
 
-  ```bash
-  git init
-  (echo node_modules/ && echo .next/) >> .gitignore
-  ```
+   ```bash
+   git init
+   (echo node_modules/ && echo .next/) >> .gitignore
+   ```
 1. Create the Heroku app:
 
-  ```bash
-  heroku create $APP_NAME
-  ```
+   ```bash
+   heroku create $APP_NAME
+   ```
 1. 🚀 Deploy:
 
-  ```bash
-  git add .
-  git commit -m 'Next.js app on Heroku'
-  git push heroku master
-  ```
+   ```bash
+   git add .
+   git commit -m 'Next.js app on Heroku'
+   git push heroku master
+   ```
 1. ♻️ Deploy changes: add, commit, & push again.
