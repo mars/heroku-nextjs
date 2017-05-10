@@ -5,8 +5,6 @@ Deploy [React](https://facebook.github.io/react/)-based universal web apps on [H
 **Demo deployment** from this repo:  
 https://nextjs.herokuapp.com
 
-[Download this repo](https://github.com/mars/heroku-nextjs/archive/master.zip) as a Heroku-ready app template, or follow [Production Deployment](#production-deployment) to push an existing app to Heroku.
-
 **A custom Node/Express server** is supported. Use it to:
 
 * combine a Node API with a Next/React UI
