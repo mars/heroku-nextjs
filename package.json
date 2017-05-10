@@ -5,8 +5,7 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start -p $PORT",
-    "heroku-postbuild": "heroku-nextjs-build"
+    "start": "next start -p $PORT"
   },
   "engines": {
     "node": "6.9.x"
@@ -30,7 +29,6 @@
   },
   "homepage": "https://github.com/mars/heroku-nextjs#readme",
   "dependencies": {
-    "@mars/heroku-nextjs-build": "^2.0.0",
     "next": "^2.0.0",
     "react": "^15.4.2",
     "react-dom": "^15.4.2"
