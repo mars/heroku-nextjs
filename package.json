@@ -11,9 +11,6 @@
   "engines": {
     "node": "6.9.x"
   },
-  "cacheDirectories": [
-    "nextjs/node_modules"
-  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mars/heroku-nextjs.git"
