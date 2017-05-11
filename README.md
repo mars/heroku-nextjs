@@ -5,8 +5,6 @@ Deploy [React](https://facebook.github.io/react/)-based universal web apps on [H
 **Demo deployment** from this repo:  
 https://nextjs.herokuapp.com
 
-[Download this repo](https://github.com/mars/heroku-nextjs/archive/master.zip) as a Heroku-ready app template, or follow [Production Deployment](#production-deployment) to push an existing app to Heroku.
-
 **A custom Node/Express server** is supported. Use it to:
 
 * combine a Node API with a Next/React UI
@@ -27,26 +25,35 @@ https://nextjs.herokuapp.com
 
 Once you have a [Next app working locally](https://github.com/zeit/next.js#how-to-use), you may deploy it for public access.
 
-🌈 In February 2017, [Next was fixed](https://github.com/zeit/next.js/pull/1164) so that it no longer requires a static build path. As a result, the **[Heroku build adapter](https://github.com/mars/heroku-nextjs-build/blob/master/bin/heroku-nextjs-build) is no longer required**. Next may be deployed to Heroku without any special setup.
+1. Add the [`heroku-postbuild`](https://devcenter.heroku.com/articles/nodejs-support#heroku-specific-build-steps) hook to automatically build the Next app on each deployment:
 
-✏️ *In the following instructions, replace `$APP_NAME` with your own unique app name.*
+   Merge this entry into **package.json**:
 
+   ```json
+   {
+     "scripts": {
+       "heroku-postbuild": "next build"
+     }
+   }
+   ```
+
+   🌈 *In February 2017, [Next was fixed](https://github.com/zeit/next.js/pull/1164), so the **[Heroku build adapter](https://github.com/mars/heroku-nextjs-build/blob/master/bin/heroku-nextjs-build) is no longer required**.*
 1. Ensure the app is a git repo, ignoring local-only directories:
 
-  ```bash
-  git init
-  (echo node_modules/ && echo .next/) >> .gitignore
-  ```
+   ```bash
+   git init
+   (echo node_modules/ && echo .next/) >> .gitignore
+   ```
 1. Create the Heroku app:
 
-  ```bash
-  heroku create $APP_NAME
-  ```
+   ```bash
+   heroku create $APP_NAME
+   ```
 1. 🚀 Deploy:
 
-  ```bash
-  git add .
-  git commit -m 'Next.js app on Heroku'
-  git push heroku master
-  ```
+   ```bash
+   git add .
+   git commit -m 'Next.js app on Heroku'
+   git push heroku master
+   ```
 1. ♻️ Deploy changes: add, commit, & push again.
