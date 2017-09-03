@@ -1,5 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
+import GlobalFunctions from '../components/global-functions'
 import Logo from '../components/logo'
 
 export default () => (
