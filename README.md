@@ -32,6 +32,7 @@ Once you have a [Next app working locally](https://github.com/zeit/next.js#how-t
    ```json
    {
      "scripts": {
+       "start": "next start -p $PORT",
        "heroku-postbuild": "next build"
      }
    }
