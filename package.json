@@ -27,7 +27,7 @@
   },
   "homepage": "https://github.com/mars/heroku-nextjs#readme",
   "dependencies": {
-    "next": "^4.0.3",
+    "next": "^4.2.3",
     "react": "^16.0.0",
     "react-dom": "^16.0.0"
   }
