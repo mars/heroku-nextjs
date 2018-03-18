@@ -27,7 +27,7 @@
   },
   "homepage": "https://github.com/mars/heroku-nextjs#readme",
   "dependencies": {
-    "next": "5.0.1-canary.13",
+    "next": "5.0.1-canary.16",
     "react": "^16.0.0",
     "react-dom": "^16.0.0"
   }
