@@ -9,7 +9,7 @@
     "heroku-postbuild": "npm run build"
   },
   "engines": {
-    "node": "6.11.x"
+    "node": "8.x"
   },
   "repository": {
     "type": "git",
