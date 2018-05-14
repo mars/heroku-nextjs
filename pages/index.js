@@ -26,7 +26,7 @@ export default () => (
 
     <h1><Logo style={{ height: '1.45rem' }}/> Next.js on Heroku</h1>
 
-    <p>Deploy <a href="https://zeit.co/blog/next">Next.js</a> universal web apps on <a href="https://www.heroku.com/home">Heroku</a>.</p>
+    <p>Deploy <a href="https://nextjs.org/">Next.js</a> universal web apps on <a href="https://www.heroku.com/home">Heroku</a>.</p>
 
     <p>This <strong>demo deployment on Heroku</strong> is from the repo <a href="https://github.com/mars/heroku-nextjs">mars/heroku-nextjs</a>.</p>
 
