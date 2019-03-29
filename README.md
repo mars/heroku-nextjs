@@ -60,3 +60,9 @@ Once you have a [Next app working locally](https://nextjs.org/docs/#setup), you 
    git push heroku master
    ```
 1. ♻️ Deploy changes: add, commit, & push again.
+
+## Custom Config
+
+Next itself supports build & runtime configuration through the [next.config.js](https://nextjs.org/docs/#exposing-configuration-to-the-server--client-side) file.
+
+Use environment variables ([Heroku config vars](https://devcenter.heroku.com/articles/config-vars)) within your React components, no rebuilds required! Simply set [next.config.js](https://nextjs.org/docs/#exposing-configuration-to-the-server--client-side)) values from the server's environment using `process.env` object.
