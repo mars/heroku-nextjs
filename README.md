@@ -57,8 +57,10 @@ Once you have a [Next app working locally](https://nextjs.org/docs/#setup), you 
    ```bash
    git add .
    git commit -m 'Next.js app on Heroku'
-   git push heroku master
+   git push heroku main 
    ```
+   ⭐️ *As of July 2020, [Heroku supports `git push heroku main`](https://devcenter.heroku.com/changelog-items/1829) and encourages its use. The support for the branch name of 'master' will remain available for backwards compatibility.*
+
 1. ♻️ Deploy changes: add, commit, & push again.
 
 ## Custom Config
