@@ -25,22 +25,6 @@ https://nextjs.herokuapp.com
 
 Once you have a [Next app working locally](https://nextjs.org/docs/#setup), you may deploy it for public access.
 
-1. Revise the `npm start` script to set the [web listener `$PORT`](https://devcenter.heroku.com/articles/dynos#local-environment-variables):
-
-   Merge this entry into **package.json**:
-
-   ```json
-   {
-     "scripts": {
-       "dev": "next",
-       "build": "next build",
-       "start": "next start -p $PORT"
-     }
-   }
-   ```
-
-   ⭐️ *In March 2019, [Heroku began running `npm run build` automatically](https://devcenter.heroku.com/changelog-items/1573), so the old `heroku-postbuild` script entry is no longer required.*
-
 1. Ensure the app is a git repo, ignoring local-only directories:
 
    ```bash
