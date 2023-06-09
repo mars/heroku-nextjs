@@ -1,6 +1,6 @@
 {
   "name": "Next.js",
-  "description": "Universal web app built on React.js, server-rendered with Node.js",
+  "description": "Universal web app built on React.js, static-served by Nginx",
   "scripts": {
   },
   "env": {
@@ -16,6 +16,10 @@
   "buildpacks": [
     {
       "url": "heroku/nodejs"
+    },
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-nginx.git#improve-herokuness"
     }
-  ]
+  ],
+  "stack": "heroku-22"
 }
