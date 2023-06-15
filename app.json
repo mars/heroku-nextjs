@@ -18,7 +18,7 @@
       "url": "heroku/nodejs"
     },
     {
-      "url": "https://github.com/heroku/heroku-buildpack-nginx.git#improve-herokuness"
+      "url": "heroku-community/nginx"
     }
   ],
   "stack": "heroku-22"
