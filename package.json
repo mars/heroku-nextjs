@@ -3,9 +3,9 @@
   "version": "2.0.0",
   "description": "Deploy Next.js server-side React apps to Heroku",
   "scripts": {
-    "dev": "next",
+    "dev": "next -p ${PORT:-3000}",
     "build": "next build",
-    "start": "next start -p $PORT"
+    "start": "next start -p ${PORT:-3000}"
   },
   "engines": {
     "node": "20"
